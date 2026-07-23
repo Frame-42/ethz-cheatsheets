@@ -34,7 +34,7 @@
         \begin{align*}
             y_h' - 2y_h &= 0 \\[-0.6em]
             y_h' &= 2y_h \\[-0.6em]
-            y_h &= 2Ce^{2x} \\[-0.6em]
+            y_h &= Ce^{2x} \\[-0.6em]
         \end{align*}
     \item Betrachte Konstanten als Funktion: $C \to C(x)$, $y = C(x) \cdot e^{2x}$
     \item Berechne Ableitung(en): $y' = C'(x) \cdot e^{2x} + 2 C(x) \cdot e^{2x}$
@@ -42,7 +42,7 @@
         \vspace{-0.6em}
         \begin{align*}
             y' - 2y &= e^{3x} \\[-0.6em]
-            C'(x) \cdot e^{2x} + 2 C(x) \cdot e^{2x} - 2C(x) \cdot e^{2x} &= e^3x \\[-0.6em]
+            C'(x) \cdot e^{2x} + 2 C(x) \cdot e^{2x} - 2C(x) \cdot e^{2x} &= e^{3x} \\[-0.6em]
             C'(x) \cdot e^{2x} &= e^{3x} \\[-0.6em]
             C'(x) &= e^x \\[-0.6em]
             C(x) &= e^x + C \\[-0.6em]
@@ -64,7 +64,7 @@
         \vspace{-1em}
         \begin{align*}
             y_p &= C_1 x e^{2x} + C_2 x^2 \\[-0.4em]
-            y_p' &= C_1 e^{2x} + 2 C_1 x e^{2x} + C_2 x^2 \\[-0.4em]
+            y_p' &= C_1 e^{2x} + 2 C_1 x e^{2x} + 2 C_2 x \\[-0.4em]
             y_p'' &= 4C_1e^{2x} + 4C_1 x e^{2x} + 2C_2 \\[-0.4em]
             y_p''' &= 12 C_1 e^{2x} + 8C_1 x e^{2x}
         \end{align*}
@@ -86,13 +86,13 @@
 \begin{align*}
      I &= \int \underbrace{e^{2x}}_\downarrow \underbrace{\cos x}_\uparrow dx \\[-0.8em]
        &= e^{2x} \sin x - 2 \int \underbrace{e^{2x}}_\downarrow \underbrace{\sin x}_\uparrow dx \\[-0.8em]
-       &= e^{2x} \sin x - 2 (e^{2x} \cos x + 2 \int e^{2x} \cos x dx) \\[-0.6em]
+       &= e^{2x} \sin x - 2 (-e^{2x} \cos x + 2 \int e^{2x} \cos x dx) \\[-0.6em]
        &= e^{2x} \sin x + 2 e^{2x} \cos x - 4 I \\[-0.2em]
     \implies 5I &= e^{2x} \sin x + 2 e^{2x} \cos x \\[-0.4em]
-    \implies \int e^{2x} \cdot \cos(x) dx &= \frac{1}{5}e^{2x}(\sin x + \cos x) + C
+    \implies \int e^{2x} \cdot \cos(x) dx &= \frac{1}{5}e^{2x}(\sin x + 2\cos x) + C
 \end{align*}
 
-\Bsp \key{Partielle Integration + Subtitution}: Lösung von $\displaystyle \int \arcsin(x) dx$
+\Bsp \key{Partielle Integration + Substitution}: Lösung von $\displaystyle \int \arcsin(x) dx$
 \vspace{-0.6em}
 \begin{align*}
     \int \arcsin(x) dx &= \int \underbrace{1}_\uparrow \cdot \underbrace{\arcsin(x)}_\downarrow dx \\[-2.6em]
@@ -100,7 +100,7 @@
     \longrightarrow y = 1 - x^2 \implies& \frac{dy}{dx} = -2x \implies \frac{-1}{2} \, dy = x \, dx \\[-0.1em]
     \implies \int x \cdot \frac{1}{\sqrt{1-x^2}} dx &= \int \frac{-1}{2} \cdot \frac{1}{\sqrt{y}} dy \\[-0.1em]
                        &= -\frac{1}{2} \cdot \int y^{-\frac{1}{2}} dy \\[-0.3em]
-                       &= -\frac{1}{2} (2y^{\frac{1}{2}} + C \\[-0.3em]
+                       &= -\frac{1}{2} (2y^{\frac{1}{2}}) + C \\[-0.3em]
                        &= -\sqrt{y} + C = -\sqrt{1-x^2} + C \\
     \implies \int \arcsin(x) dx &= x \cdot \arcsin(x) + \sqrt{1 - x^2} + C
 \end{align*}
@@ -108,7 +108,7 @@
 \Bsp \key{Partialbruchzerlegung}: Lösung von $\displaystyle \int \frac{x^2 + 2x - 1}{x^3 - x} dx$
 \vspace{-0.6em}
 \begin{enumerate}
-    \item $2 < 3$, also brauchen wir keine division
+    \item $2 < 3$, also brauchen wir keine Division
     \item $x^3 - x = x(x+1)(x-1)$
     \item $g(x) = \frac{A}{x} + \frac{B}{x + 1} + \frac{C}{x - 1}$
     \item $\frac{x^2 + 2x - 1}{x^3 - x} = \frac{A}{x} + \frac{B}{x + 1} + \frac{C}{x - 1} \\
@@ -117,14 +117,14 @@
     \item $\displaystyle \int \frac{1}{x} + \frac{-1}{x+1} + \frac{1}{x-1} dx = \ln(|x|) - \ln(|x+1|) + \ln(|x-1|) + C$
 \end{enumerate}
 
-\Bsp \key{Weirstrass-Substitution}: Lösung von $\displaystyle \int \frac{1}{2 + \sin x} dx$:
+\Bsp \key{Weierstrass-Substitution}: Lösung von $\displaystyle \int \frac{1}{2 + \sin x} dx$:
 \begin{align*}
     t = \tan(\frac{x}{2}), \hspace{10pt} \sin x &= \frac{2t}{1 + t^2}, \hspace{10pt} dx = \frac{2}{1 + t^2} dt \\[-0.1em]
     \implies \int \frac{1}{2 + \sin x} dx &= \int \frac{1}{2 + \frac{2t}{1 + t^2}} \cdot \frac{2}{1 + t^2} dt \\[-0.1em]
         &= \int \frac{2}{\frac{2 + 2t^2 + 2t}{1+t^2} \cdot (1+t^2)} dt \\[-0.1em]
-        &= \int \frac{1}{(t + \frac{1}{2})^2 + \frac{3}{4} dt} \\[-0.4em]
-        &= \frac{2}{\sqrt{3}} \arctan(\frac{t + \frac{1}{2}}{\frac{2}{\sqrt{2}}}) + C \\[-0.4em]
-        &= \frac{2}{\sqrt{3}} \arctan(\frac{\tan(\frac{x}{2}) + \frac{1}{2}}{\frac{2}{\sqrt{2}}}) + C
+        &= \int \frac{1}{(t + \frac{1}{2})^2 + \frac{3}{4}} dt \\[-0.4em]
+        &= \frac{2}{\sqrt{3}} \arctan(\frac{t + \frac{1}{2}}{\frac{\sqrt{3}}{2}}) + C \\[-0.4em]
+        &= \frac{2}{\sqrt{3}} \arctan(\frac{\tan(\frac{x}{2}) + \frac{1}{2}}{\frac{\sqrt{3}}{2}}) + C
 \end{align*}
 
 \subsection{Misc}

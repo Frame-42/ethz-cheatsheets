@@ -7,7 +7,7 @@
 
 \Def \key{Verneinung} (Negation) einer math. Aussage ist $\lnot A$.
 
-\Def Wir führen die folgenden \key{Quantoren} (”Kurzschreibweisen”) ein:
+\Def Wir führen die folgenden \key{Quantoren} (``Kurzschreibweisen'') ein:
 $\forall$, $\exists$, $\exists!$, $\nexists$. 
 Quantoren stehen vor den Aussagen.
 
@@ -31,7 +31,7 @@ oder durch Eigenschaften charakterisiert.
 
 \key{Leere Menge}: $\varnothing$. Element $x$ in Menge $M$: $x \in M$. Andernfalls: $x \notin M$.
 
-\Def Seinen $X$ und $Y$ zwei Mengen:
+\Def Seien $X$ und $Y$ zwei Mengen:
 \vspace{-0.6em}
 \begin{itemize}
     \item \key{Teilmenge} $X \subset Y$ oder $X \subseteq Y$: $\forall x \in X : x \in Y$
@@ -103,7 +103,7 @@ Es gelten die folgenden Tatsachen:
         \item[(O1)] $x\le x$ (Reflexivität)
         \item[(O2)] $(x\le y \, \land \, y\le z) \implies (x\le z)$ (Transitivität)
         \item[(O3)] $(x\le y \, \land \, y\le x) \implies (x = y)$ (Antisymmetrie)
-        \item[(O4)] $x\le y$ oder $y\le x)$ (Totalität)
+        \item[(O4)] $x\le y$ oder $y\le x$ (Totalität)
     \end{itemize}
 
     \item \key{Konsistenz mit Addition und Multiplikation}:
@@ -158,7 +158,7 @@ $$2|xy|\le \varepsilon x^2 + \frac{1}{\varepsilon}y^2$$
 \Def Für $x, y \in \RR^n$:
 \vspace{-0.6em}
 \begin{itemize}
-    \item \key{(Standard-)Skalarprodukt}: $x \cdot y = <x,y> = [x,y] := \sum_{i=1}^{n}x_i y_i$
+    \item \key{(Standard-)Skalarprodukt}: $x \cdot y = \langle x,y\rangle = [x,y] := \sum_{i=1}^{n}x_i y_i$
     \item \key{Euklidische Norm}: $||x|| := \sqrt{\sum_{i=1}^{n}x_i^2}$
     \item \key{Euklidischer Abstand}: $d(x,y) := \sqrt{\sum_{i=1}^{n}(x_i-y_i)^2}$
 \end{itemize}
@@ -168,7 +168,7 @@ $$2|xy|\le \varepsilon x^2 + \frac{1}{\varepsilon}y^2$$
 \subsection{Komplexe Zahlen}
 
 \Def \key{komplexe Zahlen}: $\CC = \{z = a + ib \, | \, a,b \in \RR\}$.
-$z = a + ib$ heisst Normal-/aritmetische/kartesische Form. $a = Re(z)$ \key{Realteil},
+$z = a + ib$ heisst Normal-/arithmetische/kartesische Form. $a = Re(z)$ \key{Realteil},
 $b = Im(z)$ \key{Imaginärteil}, $i^2 = -1$ \key{imag.}/\key{komplexe Einheit}. $z = ib$ ist \key{rein imaginär}
 
 \Def $z = x + iy$ und $\overline{z} = x - iy$ sind \key{komplex konjugiert}
@@ -176,7 +176,7 @@ $b = Im(z)$ \key{Imaginärteil}, $i^2 = -1$ \key{imag.}/\key{komplexe Einheit}. 
 \Satz $\frac{z}{w} = \frac{z \cdot \overline{w}}{w \cdot \overline{w}} = \frac{z \cdot \overline{w}}{|w|^2}$
 und $\overline{\frac{z}{w}} = \frac{\overline{z}}{\overline{w}}$ für $z,w \in \CC$
 
-\Satz Eigenschaften der komlex konjugierten Zahl
+\Satz Eigenschaften der komplex konjugierten Zahl
 \vspace{-0.6em}
 \begin{itemize}
     \item $z \cdot \overline{z} = |z|^2$
@@ -198,15 +198,15 @@ $$e^{it} = \cos(t) + i\sin(t)$$
 
 \Kor $\cos(t) = \frac{e^{it} + e^{-it}}{2}$ und $\sin(t) = \frac{e^{it} - e^{-it}}{2i}$
 
-\Def $\cosh(t) = \frac{e^x + e^{-x}}{2}$ und $\sinh(t) = \frac{e^x - e^{-x}}{2}$
+\Def $\cosh(x) = \frac{e^x + e^{-x}}{2}$ und $\sinh(x) = \frac{e^x - e^{-x}}{2}$
 
 \Def \key{Polardarstellung}: $z = r \cdot e^{i\varphi}$ und $r = |z|$, $\varphi = arg(z) \in (-\pi, \pi]$
 
-\Satz \key{Wurzeln in $\CC$}: $z^n = re^{i\varphi}$: 
+\Satz \key{Wurzeln in $\CC$}: Lösungen von $z^n = w = re^{i\varphi}$:
 $z_k = r^{\frac{1}{n}}e^{i\frac{\varphi + 2k\pi}{n}}$ wobei $0\le k < n$
 
-\Satz \key{Fundamentalsatz der Algebra}: $p(z) = \sum_{k=0}^{n} a_k x^k$, $a_k \in \CC$
+\Satz \key{Fundamentalsatz der Algebra}: $p(z) = \sum_{k=0}^{n} a_k z^k$, $a_k \in \CC$
 kann als $p(z) = a_n\prod_{k=1}^{n}(z-z_k)$ geschrieben werden, wobei $z_k$ die Nullstellen
 von $p(z)$ (mit Vielfachheit) sind
 
-\Satz $p(z)$ mit $a_k \in \RR$ $\implies$ Nullstellen komplex konjugiert
+\Satz $p(z)$ mit $a_k \in \RR$ $\implies$ Nullstellen treten in komplex konjugierten Paaren auf

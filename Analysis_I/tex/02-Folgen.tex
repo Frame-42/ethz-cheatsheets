@@ -1,7 +1,7 @@
 \section{2. Folgen}
 \Def \key{Folge} $(a_n)_{n \in \NN_0}$, $(a_n)_{n\ge 0}$ oder $(a_n)_{n=0}^\infty$. 
-Ausbildung $f : \NN_0 \to \RR$ (oder $f : \NN \to \RR$). \key{Bilder} $a(n) = a_n$
-sind \key{Gliede der Folge}
+Abbildung $f : \NN_0 \to \RR$ (oder $f : \NN \to \RR$). \key{Bilder} $a(n) = a_n$
+sind \key{Glieder der Folge}
 
 \Def Folge \key{direkt} beschreiben: $a_n = f(n)$;
 oder \key{rekursiv}: $a_n = g(a_{n-1}, a_{n-2}, \ldots)$.
@@ -21,7 +21,7 @@ Falls $\forall M > 0 \, \exists N > 0 \, \forall n > N : a_n < -M$ gilt,
 Folge divergiert \key{gegen minus unendlich}: $\lim\limits_{n\to\infty} a_n = -\infty$
 
 \Def Sei $(a_n)_{n \in \NN_0}$ Folge in $\RR$.
-\key{Teilfolge} ist Folge der form $(a_{n_k})_{k \in \NN_0}$
+\key{Teilfolge} ist Folge der Form $(a_{n_k})_{k \in \NN_0}$
 wobei $(n_k)_{k \in \NN_0}$ Folge in $\NN_0$ mit $n_{k+1} > n_k$
 
 \Satz $(a_n)_{n \in \NN_0}$ konvergent gegen $L \in \RR$. Auch jede Teilfolge $\to L$
@@ -53,8 +53,8 @@ $\lim\limits_{n\to\infty} b_n = L \in \RR$ und $C \in \RR$:
 \vspace{-0.6em}
 \begin{itemize}
     \item $\lim\limits_{n\to\infty} \frac{\log n}{n} = \lim\limits_{n\to\infty} \frac{\ln n}{n} =0$
-    \item $\lim\limits_{n\to\infty} n^\frac{1}{n} = \sqrt[n]{n} = 1$
-    \item $\lim\limits_{n\to\infty} x^\frac{1}{n} = \sqrt[n]{x} = 1$, $x > 0$
+    \item $\lim\limits_{n\to\infty} n^\frac{1}{n} = \lim\limits_{n\to\infty} \sqrt[n]{n} = 1$
+    \item $\lim\limits_{n\to\infty} x^\frac{1}{n} = \lim\limits_{n\to\infty} \sqrt[n]{x} = 1$, $x > 0$
     \item $\forall x \in \RR : \lim\limits_{n\to\infty} (1 + \frac{x}{n})^n = e^x$
     \item $\forall x \in \RR : \lim\limits_{n\to\infty} \frac{x^n}{n!} = 0$
 \end{itemize}
@@ -74,7 +74,7 @@ falls $\forall n,m \in \NN_0 : m > n \implies a_m\le a_n$ (resp. $\geq$).
 
 \Satz Jede konvergente Folge ist beschränkt
 
-\Satz Eigenschaften von monotone Folge
+\Satz Eigenschaften von monotonen Folgen
 \vspace{-0.6em}
 \begin{itemize}
     \item Eine monotone Folge konvergiert $\iff$ sie ist beschränkt

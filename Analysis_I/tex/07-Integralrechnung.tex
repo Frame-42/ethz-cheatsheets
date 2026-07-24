@@ -45,7 +45,7 @@ kann man $\displaystyle \int f(x) dx$ wie folgt Lösen:
     \item Für jeden Faktor von $q(x)$ addiert man entsprechende Terme im Ansatz $g(x)$:
     \begin{itemize}
         \item Einfache reelle Nullstelle $(x - x_1)$: $\frac{A}{x - x_1}$
-        \item Mehrfache relle Nullstelle $(x -x_1)^m$: $\frac{A_1}{x - x_1} + \cdots + \frac{A_m}{(x - x_1)^m}$
+        \item Mehrfache reelle Nullstelle $(x -x_1)^m$: $\frac{A_1}{x - x_1} + \cdots + \frac{A_m}{(x - x_1)^m}$
         \item quadratischer Faktor $(x^2 + ax + b)$ mit $a^2 - 4b < 0$: $\frac{Bx + C}{x^2 + ax + b}$:
     \end{itemize}
     \item Setze $\frac{r(x)}{q(x)} = g(x)$
@@ -63,6 +63,20 @@ kann man $\displaystyle \int f(x) dx$ wie folgt Lösen:
 
 \Satz $\star$ \key{Weierstrass-Substitution}: Nach der Substit. $t = \tan(\frac{x}{2})$ gilt:
 $$\sin x = \frac{2t}{1 + t^2} \hspace{10pt} \cos x = \frac{1 - t^2}{1 + t^2} \hspace{10pt} dx = \frac{2}{1 + t^2} dt$$
+
+\begin{minipage}{\linewidth}
+\Satz Folgendes kann hilfreich sein:
+
+\begin{tabular}{l l l}
+    Integrand Form & Substitution & Identität \\
+    \hline
+    $\sqrt{a^2 - x^2}$ & $x = a \sin \theta$ & $1 - \sin^2 \theta = \cos^2 \theta$ \\
+    $\sqrt{a^2 + x^2}$ & $x = a \tan \theta$ & $1 + \tan^2 \theta = \sec^2 \theta$ \\
+    $\sqrt{x^2 - a^2}$ & $x = a \sec \theta$ & $\sec^2 \theta - 1 = \tan^2 \theta$ \\
+    $\tan^2 x$         &                     & $\sec^2 \theta - 1 = \tan^2 \theta$ \\
+    $\cot^2 x$         &                     & $\csc^2 \theta - 1 = \cot^2 \theta$
+\end{tabular}
+\end{minipage}
 
 \subsection{Bestimmtes Integral (Riemann-Integral)}
 

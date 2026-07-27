@@ -30,11 +30,13 @@ $p(\lambda) = a_n \lambda^n + \ldots + a_1 \lambda + a_0$.
 Nun für die allgemeine Lösung der DG:
 \vspace{-0.6em}
 \begin{itemize}
-    \item Falls alle $r$ Nullstellen $\lambda_i$ von $p(\lambda)$ reell mit Multiplizität $m_i$:
-    $u(x) = \sum_{i=1}^{r} \left(\sum_{p=0}^{m_i-1} C_{ip}x^pe^{\lambda_i x}\right)$
-    \item Falls $r$ reelle Nullstellen und $s$ \textit{Paare} komplexer Nullstellen ($a_j \pm ib_j$)
-    mit Multiplizität $m_j$:
-    $u(x) = \sum_{i=1}^{r}\left(\sum_{p=0}^{m_i - 1}C_{ip} x^p e^{\lambda_i x}\right) + \sum_{j=1}^{s} \left(\sum_{q=0}^{m_j-1}(A_{jq} x^q e^{a_j x} \sin(b_j x) + B_{jq} x^q e^{a_j x} \cos(b_j x))\right)$
+    \item Falls alle $r$ Nullstellen $\lambda_i$ von $p(\lambda)$ reell mit Multiplizität $m_i$, für
+    beliebige Konstanten $C_{ip} \in \RR$:
+    $u(x) = \sum_{i=1}^{r} \sum_{p=0}^{m_i-1} C_{ip} \, x^p e^{\lambda_i x}$
+    \item Falls $r$ reelle Nullstellen $\lambda_i$ (Multiplizität $m_i$) und $s$ \textit{Paare}
+    komplexer Nullstellen $a_j \pm ib_j$ (Multiplizität $m_j$), für beliebige Konstanten
+    $C_{ip}, A_{jq}, B_{jq} \in \RR$:
+    $u(x) = \sum_{i=1}^{r} \sum_{p=0}^{m_i-1} C_{ip} \, x^p e^{\lambda_i x} + \sum_{j=1}^{s} \sum_{q=0}^{m_j-1} x^q e^{a_j x} \big(A_{jq} \sin(b_j x) + B_{jq} \cos(b_j x)\big)$
 \end{itemize}
 
 In der allgemeinen Lösung einer DG $n$-ter Ordnung tauchen \key{$n$ Konstanten} auf.

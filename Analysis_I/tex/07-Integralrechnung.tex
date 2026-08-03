@@ -37,7 +37,7 @@ $$\int \underbrace{f(x)}_{\downarrow}\cdot\underbrace{g'(x)}_{\uparrow} dx = f(x
 $$\int f'(\underbrace{g(x)}_y) \cdot \underbrace{g'(x) dx}_{dy} = \int \frac{df}{dy} dy = f(y) + C = f(g(x)) + C$$
 
 \Satz $\star$ \key{Partialbruchzerlegung} (PBZ): für Polynome $p(x)$, $q(x)$ und $f(x) = \frac{p(x)}{q(x)}$
-kann man $\displaystyle \int f(x) dx$ wie folgt Lösen:
+kann man $\displaystyle \int f(x) dx$ wie folgt lösen:
 \vspace{-0.6em}
 \begin{enumerate}
     \item Falls $\deg(p) \ge \deg(q)$: Polynomdivision $\to$ $f(x) = s(x) + \frac{r(x)}{q(x)}$
@@ -46,7 +46,7 @@ kann man $\displaystyle \int f(x) dx$ wie folgt Lösen:
     \begin{itemize}
         \item Einfache reelle Nullstelle $(x - x_1)$: $\frac{A}{x - x_1}$
         \item Mehrfache reelle Nullstelle $(x -x_1)^m$: $\frac{A_1}{x - x_1} + \cdots + \frac{A_m}{(x - x_1)^m}$
-        \item quadratischer Faktor $(x^2 + ax + b)$ mit $a^2 - 4b < 0$: $\frac{Bx + C}{x^2 + ax + b}$:
+        \item quadratischer Faktor $(x^2 + ax + b)$ mit $a^2 - 4b < 0$: $\frac{Bx + C}{x^2 + ax + b}$
     \end{itemize}
     \item Setze $\frac{r(x)}{q(x)} = g(x)$
     \item Löse für $A, B, C, \ldots$ (Nullstellen einsetzen oder Gleichungssystem)
@@ -65,7 +65,8 @@ kann man $\displaystyle \int f(x) dx$ wie folgt Lösen:
 $$\sin x = \frac{2t}{1 + t^2} \hspace{10pt} \cos x = \frac{1 - t^2}{1 + t^2} \hspace{10pt} dx = \frac{2}{1 + t^2} dt$$
 
 \begin{minipage}{\linewidth}
-\Satz Folgendes kann hilfreich sein:
+\Satz Folgendes kann hilfreich sein
+($\sec = \frac{1}{\cos}$, $\csc = \frac{1}{\sin}$, $\cot = \frac{1}{\tan}$):
 
 \begin{tabular}{l l l}
     Integrand Form & Substitution & Identität \\
@@ -73,8 +74,8 @@ $$\sin x = \frac{2t}{1 + t^2} \hspace{10pt} \cos x = \frac{1 - t^2}{1 + t^2} \hs
     $\sqrt{a^2 - x^2}$ & $x = a \sin \theta$ & $1 - \sin^2 \theta = \cos^2 \theta$ \\
     $\sqrt{a^2 + x^2}$ & $x = a \tan \theta$ & $1 + \tan^2 \theta = \sec^2 \theta$ \\
     $\sqrt{x^2 - a^2}$ & $x = a \sec \theta$ & $\sec^2 \theta - 1 = \tan^2 \theta$ \\
-    $\tan^2 x$         &                     & $\sec^2 \theta - 1 = \tan^2 \theta$ \\
-    $\cot^2 x$         &                     & $\csc^2 \theta - 1 = \cot^2 \theta$ \\
+    $\tan^2 x$         &                     & $\sec^2 x - 1 = \tan^2 x$ \\
+    $\cot^2 x$         &                     & $\csc^2 x - 1 = \cot^2 x$ \\
     $\sin^2 x$         &                     & $\sin^2 x = \frac{1 - \cos(2x)}{2}$ \\
     $\cos^2 x$         &                     & $\cos^2 x = \frac{1 + \cos(2x)}{2}$ \\
     $\sin x \cos x$    &                     & $\sin(2x) = 2 \sin x \cos x$
@@ -162,7 +163,7 @@ Ausserdem ist jede Stammfunktion von der obigen Form
 $$F(x) = F(a) + \int_{a}^{x} \hspace{-4pt}F'(t) dt$$
 
 \Kor $f: [a, b] \to \RR$ stetig und $F: [a, b] \to \RR$ Stammfunktion von $f$.
-$$\int_a^b \hspace{-4pt} f(t) dt = F(x)\Big|_a^b = F(b) - F(a)$$
+$$\int_a^b \hspace{-4pt} f(t) dt = F(t)\Big|_a^b = F(b) - F(a)$$
 
 \Satz \key{Partielle Integration}: $f,g: [a, b] \to \RR$ stetig diff.bar.
 $$\int_a^b \hspace{-4pt} f(x)g'(x) dx = f(x)g(x) \Big|_a^b - \int_a^b \hspace{-4pt} f'(x)g(x) dx$$
@@ -172,8 +173,8 @@ $g: J \to \RR$ stetig. Dann für alle $[a, b] \subset I$:
 $$\int_a^b \hspace{-4pt} g(f(x))f'(x) dx = \int_{f(a)}^{f(b)} \hspace{-4pt} g(y) dy$$
 
 \Satz \key{Substitution, Version 2}: $I, J \subset \RR$ Intervalle, $f: I \to J$ stetig diff.bar
-und $g: J \to \RR$ stetig. Für $[a, b] \subset I$ gilt $f'(x) \ne 0$ für alle $x \in [a, b]$
-und $f^{-1}: [f(a), f(b)] \to \RR$ die Inverse von $f\Big|_{[a,b]}$. Dann gilt
+und $g: J \to \RR$ stetig. Für $[a, b] \subset I$ gilt $f'(x) > 0$ für alle $x \in [a, b]$
+(also $f$ streng mon. wachsend) und $f^{-1}: [f(a), f(b)] \to \RR$ die Inverse von $f\Big|_{[a,b]}$. Dann gilt
 $$\int_a^b \hspace{-4pt} g(f(x)) dx = \int_{f(a)}^{f(b)} \hspace{-4pt} g(y)(f^{-1})'(y)dy$$
 
 \Satz $\star$ Für $p > 0$ gilt:

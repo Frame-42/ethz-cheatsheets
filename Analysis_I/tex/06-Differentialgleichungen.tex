@@ -3,7 +3,7 @@
 \subsection{Teil 1}
 
 \Def In \key{Differentialgleichung} treten gesuchte Funktion sowie Ableitungen auf,
-z.B $y'(x) = 69x \cdot y(x) + 420$. $x$ ist \key{unabhängige Variable} und $y$ heisst
+z.B. $y'(x) = 69x \cdot y(x) + 420$. $x$ ist \key{unabhängige Variable} und $y$ heisst
 \key{abhängige Variable}
 
 \Def Eine DG der Form
@@ -22,7 +22,7 @@ $y(x) = C_1 y_1(x) + \ldots + C_n y_n(x)$, $C_1, \ldots, C_n \in \RR$
 
 \subsection{Lösen einer linearen, homogenen DG}
 
-Gegeben $a_n u^{(n)}(x) + \ldots + a_0 u(x) = 0$. Der \key{Ansatz} $u(x) = e^{\lambda x}$
+Gegeben $a_n u^{(n)}(x) + \ldots + a_0 u(x) = 0$ mit \key{konstanten} $a_i$. Der \key{Ansatz} $u(x) = e^{\lambda x}$
 (Eulerscher Ansatz) führt uns zur \key{charakteristischen Gleichung}
 $a_n \lambda^n + \ldots + a_1 \lambda + a_0 = 0$ und das \key{charakteristische Polynom}
 $p(\lambda) = a_n \lambda^n + \ldots + a_1 \lambda + a_0$.
@@ -66,10 +66,10 @@ Wie verändert sich $y(t)$ in einem kleinen Zeitintervall $\Delta t$?
     \item Nettobilanz: $y(t + \Delta t) = y(t) + B(t) \cdot \Delta t - T(t) \cdot \Delta t$
 \end{itemize}
 
-Was ist die Differenz zwischen nahe den Werten, falls die Zeiten nahe beieinander sind?
+Wie gross ist die Änderung von $y$ über ein kleines Zeitintervall $\Delta t$?
 $$\Delta y = y(t + \Delta t) - y(t) = B(t) \cdot \Delta t - T(t) \cdot \Delta t $$
 
-Was ist die proportionale Veränderung?
+Was ist die durchschnittliche Änderungsrate?
 $$\frac{\Delta y}{\Delta t} = \frac{y(t + \Delta t) - y(t)}{\Delta t} = B(t) - T(t)$$
 
 Was passiert im Grenzwert $\Delta t \to 0$?
@@ -81,7 +81,7 @@ $$y'(t) = B(t) - T(t)$$
 \subsubsection{Mechanische Probleme}
 
 Hier ist zu beachten, dass das Problem meist über die involvierten Kräfte beschrieben werden kann.
-Für jede Kraft $F$ gilt
+Für die resultierende Kraft $F$ (Summe aller Kräfte) gilt
 $$F = m \cdot y'' = m \cdot a$$
 wobei $y$ die Position des betrachteten Körpers und $a$ dessen Beschleunigung sind.
 
@@ -99,13 +99,13 @@ wobei $y$ die Position des betrachteten Körpers und $a$ dessen Beschleunigung s
 \end{itemize}
 
 \Satz \key{Trennung der Variablen}:
-$$y'(x) = f(x) \cdot g(y) \implies \int \frac{1}{g(y)} dy = \int f(x) dx$$
+$$y'(x) = f(x) \cdot g(y), \; g(y) \ne 0 \implies \int \frac{1}{g(y)} dy = \int f(x) dx$$
 
 \Satz \key{Lineare Substitution} Falls DG der Form
 $y'(x) = f(ax + by(x) + c)$, mit $a, b, c \in \RR$, dann erhalten wir durch die
 Substitution $u = ax + by(x) + c$ eine DG mit trennbaren Variablen
 
-\Def Eine DG, wo die unab. var. $x$ nie vorkommt, heisst \key{autonom}
+\Def Eine DG, in der die unab. Var. $x$ nie vorkommt, heisst \key{autonom}
 
 \Def Eine DG folgender Form heisst \key{homogen in den Variablen}:
 $$y' = g\left(\frac{y}{x}\right)$$
@@ -113,9 +113,9 @@ $$y' = g\left(\frac{y}{x}\right)$$
 \Satz \key{Substitution bei in den Variablen homogenen DG} Falls DG homogen in den Variablen
 erhalten wir durch die Substitution $u = \frac{y}{x}$ eine DG mit trennbaren Variablen
 
-\Def Falls DG der Form
+\Def Falls eine DG der Form
 $$a_n(x)y^{(n)}(x) + \cdots + a_0(x)y(x) = s(x) \ne 0$$
-heisst $a_n(x)y^{(n)}(x) + \cdots + a_0(x)y(x) = 0$ die \key{dazugehörige homogene DG}
+vorliegt, heisst $a_n(x)y^{(n)}(x) + \cdots + a_0(x)y(x) = 0$ die \key{dazugehörige homogene DG}
 
 \Satz Ist $y_p(x)$ eine \key{partikuläre Lösung} einer \textit{linearen, inhomogenen} DG und
 $y_h(x)$ die allgemeine Lösung der dazugehörigen homogenen DG, so ist die allgemeine Lösung der
@@ -141,7 +141,7 @@ Falls Störfunktion \key{Exponentialfunktion}, wählen wir als Ansatz Exponentia
 Falls Störfunktion \key{Schwingung}, wählen wir als Ansatz Schwingung gleicher Frequenz
 
 \Satz Falls $s(t) = A \sin(\omega t) + B \cos(\omega t)$, dann $y(t) = C_1 \sin(\omega t) + C_2 \cos(\omega t)$ \\
-\textbf{Spezialfall}: $i\omega$ ist eine $m$-fache Nullstelle des char. Pol.: $y(t) = (C_1 \sin(\omega t) + C_2 \cos(\omega t))t^m$
+\textbf{Spezialfall}: $\pm i\omega$ ist eine $m$-fache Nullstelle des char. Pol.: $y(t) = (C_1 \sin(\omega t) + C_2 \cos(\omega t))t^m$
 
 Falls Störfunktion \key{Produkt von Polynom und Exponentialfunktion}, wählen wir als
 Ansatz Produkt von Polynom vom gleichen Grad und Exponentialfunktion mit gleichem Exponenten

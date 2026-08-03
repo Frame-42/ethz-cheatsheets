@@ -2,15 +2,15 @@
 
 \subsection{Konzept}
 
-\Def \key{Funktion}: Input $\to$ 1 Output aus \key{Zielbereich} ($range(f)$)
+\Def \key{Funktion}: Input $\to$ 1 Output aus \key{Zielbereich} ($\operatorname{codomain}(f)$)
 \begin{align*}
-    f: domain(f) & \to range(f) \\
+    f: \operatorname{domain}(f) & \to \operatorname{codomain}(f) \\
     x & \mapsto y = f(x)
 \end{align*}
 
-\Def \key{Definitionsbereich} $\DD(f) = domain(f)$: alle mögliche Inputs
+\Def \key{Definitionsbereich} $\DD(f) = \operatorname{domain}(f)$: alle mögliche Inputs
 
-\Def \key{Wertebereich}/\key{Bildmenge} $\WW(f) = image(f)$: realisierte Outputs
+\Def \key{Wertebereich}/\key{Bildmenge} $\WW(f) = \operatorname{image}(f)$: realisierte Outputs
 
 \Def input: \key{unabhängige Variable}/\key{Argument}, output: \key{abhängige Variable}
 
@@ -36,9 +36,9 @@ mit $f\rvert_{D'}(x) = f(x) \forall x \in D'$
 
 \Def $f: X \to Y$, $g: Y \to Z$. \key{Verknüpfung} $g \circ f : X \to Z$ mit $\forall x \in X : g \circ f(x) = g(f(x))$
 
-\Def \key{Identität} (\key{Identitätsfunktion}): $\forall x \in X : id_X(x) = x$
+\Def \key{Identität} (\key{Identitätsfunktion}): $\forall x \in X : \operatorname{id}_X(x) = x$
 
-\Satz Falls $f: X \to Y$ bijektiv, ex. eindeutiges $g: Y \to X$ mit $g \circ f = id_X$ und $f \circ g = id_Y$.
+\Satz Falls $f: X \to Y$ bijektiv, ex. eindeutiges $g: Y \to X$ mit $g \circ f = \operatorname{id}_X$ und $f \circ g = \operatorname{id}_Y$.
 $g$ heisst \key{Inverse}/\key{Umkehrfunktion}, $f^{-1}$
 
 \begin{minipage}{\linewidth}
@@ -71,10 +71,10 @@ Falls rechts \key{rechtsgekrümmt}/\key{konkav}
 
 \Def $f: \DD(f) \to \RR$, $x_0 \in \RR$, $\DD(f) \cap (x_0 - \delta, x_0 + \delta)\ne \varnothing \forall \delta > 0$.
 Dann $L \in \RR$ \key{Grenzwert}/\key{Limes} von $f(x)$ an Stelle $x_0$, falls
-$$\forall \varepsilon > 0 \, \exists \delta > 0 : x \in \DD(f) \cap (x_0 - \delta, x_0 + \delta) \implies |f(x) - L| < \varepsilon$$
-$L = \lim\limits_{\substack{x\ge x_0 \\ x \to x_0}} f(x)$ ist \key{rechtsseitigen Grenzwert} falls
+$$\forall \varepsilon > 0 \, \exists \delta > 0 : x \in \DD(f) \cap (x_0 - \delta, x_0 + \delta) \backslash \{x_0\} \implies |f(x) - L| < \varepsilon$$
+$L = \lim\limits_{\substack{x\ge x_0 \\ x \to x_0}} f(x)$ ist \key{der rechtsseitige Grenzwert} falls
 $$\forall \varepsilon > 0 \, \exists \delta > 0 : x \in \DD(f) \cap [x_0, x_0 + \delta) \implies |f(x) - L| < \varepsilon$$
-$L = \lim\limits_{\substack{x\le x_0 \\ x \to x_0}} f(x)$ ist \key{linksseitigen Grenzwert} falls
+$L = \lim\limits_{\substack{x\le x_0 \\ x \to x_0}} f(x)$ ist \key{der linksseitige Grenzwert} falls
 $$\forall \varepsilon > 0 \, \exists \delta > 0 : x \in \DD(f) \cap (x_0 - \delta, x_0] \implies |f(x) - L| < \varepsilon$$
 Man kann ähnlich $\lim\limits_{\substack{x > x_0 \\ x \to x_0}}$ und $\lim\limits_{\substack{x < x_0 \\ x \to x_0}}$
 definieren (mit $()$ anstatt $[]$)
@@ -83,9 +83,9 @@ $$\forall \varepsilon > 0 \, \exists M > 0 : x \in \DD(f) \cap (M, \infty) \impl
 $f$ hat \key{für $x$ gegen $-\infty$} den Grenzwert $L = \lim\limits_{x\to-\infty}f(x)$, falls $\forall R > 0 : \DD(f) \cap (-\infty, -R) \ne \varnothing$ und
 $$\forall \varepsilon > 0 \, \exists M > 0 : x \in \DD(f) \cap (-\infty, -M) \implies |f(x) - L| < \varepsilon$$
 $f$ hat in $x_0$ den \key{uneigentlichen Grenzwert} $\lim\limits_{x \to x_0}f(x) = \infty$ falls
-$$\forall N > 0 \, \exists \delta > 0 : x \in \DD(f) \cap (x_0 - \delta, x_0 + \delta) \implies f(x) \ge N$$
+$$\forall N > 0 \, \exists \delta > 0 : x \in \DD(f) \cap (x_0 - \delta, x_0 + \delta) \backslash \{x_0\} \implies f(x) \ge N$$
 $f$ hat in $x_0$ den \key{uneigentlichen Grenzwert} $\lim\limits_{x \to x_0}f(x) = -\infty$ falls
-$$\forall N > 0 \, \exists \delta > 0 : x \in \DD(f) \cap (x_0 - \delta, x_0 + \delta) \implies f(x) \le -N$$
+$$\forall N > 0 \, \exists \delta > 0 : x \in \DD(f) \cap (x_0 - \delta, x_0 + \delta) \backslash \{x_0\} \implies f(x) \le -N$$
 
 \Satz $f: \DD(f) \to \RR$. $\lim\limits_{x \to x_0} f(x) = L$ $\iff$ für jede konv. Folge $(x_n)_{n \in \NN_0}$,
 die gegen $x_0$ konvergiert, gilt $\lim\limits_{n\to\infty} f(x_n) = L$
@@ -115,7 +115,7 @@ $\frac{f(x+y)-f(x)}{x+y-x} = \frac{mx + my + q -mx - q}{y} = \frac{my}{y} = m$
     \item $\exp(x + y) = \exp(x)\cdot\exp(y) \, \forall x,y \in \RR$
 \end{itemize}
 
-\Def Exponentialfunktion mit \key{Anfangswert} $z_0$ und \key{Wachstumfaktor}/\key{Basis} $a$: $z = f(t) = z_0 \cdot a^t = z_0 \cdot e^{kt}$
+\Def Exponentialfunktion mit \key{Anfangswert} $z_0$ und \key{Wachstumfaktor}/\key{Basis} $a > 0$: $z = f(t) = z_0 \cdot a^t = z_0 \cdot e^{kt}$ mit $k = \ln(a)$.
 Eigenschaft: \key{relative Zunahme konstant}: $\frac{z(t + s)}{z(t)} = \frac{z_0 \cdot a^{t + s}}{z_0 \cdot a^t} = a^s$
 
 \Def Eindeutige Inverse zu $\exp$ heisst (\key{natürlicher}) \key{Logarithmus}: $\log(x): \RR^+ \to \RR$
@@ -152,9 +152,9 @@ Eigenschaft: \key{relative Zunahme konstant}: $\frac{z(t + s)}{z(t)} = \frac{z_0
 \Def $y = f(x) = k\cdot x^p$, $k,p \in \RR$, heisst \key{Potenzfunktion}
 
 \Def $y = f(x) = \sum_{s=0}^{n} a_s x^s$, $n \in \NN$ und alle $a_s \in \RR$, heisst \key{Polynom}.
-$a_s$ heissen \key{Koeffizienten}, $n$ ist der \key{Grad} des Polynoms.
+$a_s$ heissen \key{Koeffizienten}; falls $a_n \ne 0$, ist $n$ der \key{Grad} des Polynoms.
 
-\Def $y = f(x) = \frac{p(x)}{q(x)}$, $p(x)$ und $q(x)$ Polynome, heisst \key{rationale F.}
+\Def $y = f(x) = \frac{p(x)}{q(x)}$, $p(x)$ und $q(x) \ne 0$ Polynome, heisst \key{rationale F.}
 
 \subsection{Stetigkeit}
 
@@ -177,7 +177,7 @@ für jede Folge $(x_n)_{n\in\NN_0}$ mit $x_n \to x_0$ konvergiert $(f(x_n))_{n\i
     \item $c \cdot f$ ist stetig
     \item $f \cdot g$ ist stetig
     \item $\frac{f}{g}$ ist stetig, sofern $g \ne 0$
-    \item Falls $f: I \subset \RR \to image(f)$, $g: image(f) \to \RR$ ist
+    \item Falls $f: I \subset \RR \to \operatorname{image}(f)$, $g: \operatorname{image}(f) \to \RR$ ist
     $g \circ f$ stetig und $\lim\limits_{x\to x_0} g(f(x)) = g(\lim\limits_{x\to x_0}f(x))$
 \end{itemize}
 

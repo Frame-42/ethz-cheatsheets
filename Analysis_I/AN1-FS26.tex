@@ -1,17 +1,11 @@
 \documentclass[8pt, a4paper]{extarticle}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{mathtools}
 \usepackage{multicol}
 \usepackage{enumitem}
-\usepackage{mathrsfs}
-\usepackage{booktabs}
 \usepackage{tikz}
 
-
 \usepackage{xcolor}
-\usepackage{graphicx}
-\graphicspath{ {./images/} }
 
 \usepackage[
     landscape,
@@ -30,6 +24,8 @@
 
 \usepackage[hidelinks]{hyperref}
 
+% Metadata only -- \maketitle is never called; the heading is set by hand
+% inside the document. These still feed the PDF properties via hyperref.
 \title{Analysis I FS26}
 \author{Aaron Blasko}
 \date{}
@@ -54,31 +50,6 @@
     \vskip\sepwidth
 }
 
-\titleformat{\section}
-    {\secsep\Large\bfseries}
-    {\thesection}
-    {1em}
-    {}
-    [\vspace{-\baselineskip}]
-
-\titleformat{\section}
-    {\secsep\normalfont\Large\bfseries}
-    {}
-    {0pt}
-    {\colorbox{yellow!50}}
-
-\titleformat{\subsection}
-    {\normalfont\large\bfseries}
-    {}
-    {0pt}
-    {\colorbox{yellow!50}}
-
-\titleformat{\subsubsection}
-    {\normalfont\normalsize\bfseries}
-    {}
-    {0pt}
-    {\colorbox{yellow!50}}
-
 \newcommand{\key}[1]{\textit{\color{red}{#1}}}
 
 \titleformat{\section}
@@ -101,7 +72,11 @@
 
 \setcounter{secnumdepth}{1}
 \numberwithin{equation}{section}
-\DeclareMathOperator{\sgn}{sgn}
+
+% Upright multi-letter operators (the plain forms would set as a product of
+% italic variables). \Re and \Im default to Fraktur, which is not used here.
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
 
 \newcommand{\NN}{\mathbb{N}}
 \newcommand{\ZZ}{\mathbb{Z}}
@@ -140,9 +115,5 @@
     \input{./tex/10-Tabellen.tex}
 
 \end{multicols*}
-
-\pagebreak
-
-\clearpage
 
 \end{document}

@@ -12,7 +12,7 @@ $\forall \varepsilon > 0 \, \exists N > 0 \, \forall n > N : |a_n - L| < \vareps
 existiert, sonst \key{divergent}.
 Man schreibt $\lim\limits_{n \to \infty} a_n = L$
 
-\Satz Konvergente Folge besitzt genau einen eindeutigen Grenzwert
+\Satz Konvergente Folge besitzt genau einen Grenzwert
 
 \Def Falls $\forall M > 0 \, \exists N > 0 \, \forall n > N : a_n > M$ gilt,
 Folge divergiert \key{gegen unendlich}: $\lim\limits_{n\to\infty}a_n = \infty$
@@ -33,8 +33,6 @@ $\forall \varepsilon > 0 \, \forall N \in \NN_0 \, \exists n\ge N : |a_n - A| < 
 \Satz $A$ Häufungspunkt $\iff$ Teilfolge mit $\lim\limits_{k \to \infty} a_{n_k} = A$ existiert
 
 \Kor Konvergente Folge hat genau einen Häufungspunkt: $L$
-
-\Kor Sei $A$ Häufungspunkt, unendlich viele $a_n \in (A-\varepsilon, A+\varepsilon)$
 
 \Satz Sei $\lim\limits_{n\to\infty} a_n = K \in \RR$,
 $\lim\limits_{n\to\infty} b_n = L \in \RR$ und $C \in \RR$:
@@ -59,8 +57,11 @@ $\lim\limits_{n\to\infty} b_n = L \in \RR$ und $C \in \RR$:
     \item $\forall x \in \RR : \lim\limits_{n\to\infty} \frac{x^n}{n!} = 0$
 \end{itemize}
 
-\Satz $\star$ Für grosse $x \in \RR$ resp. $n \in \NN$, $a, p \in \RR$, $a > 1$:
+\Satz $\star$ Für grosse $x \in \RR$ resp. $n \in \NN$, $a, p \in \RR$, $a > 1$, $p > 0$:
 $$\ln(\ln x) \ll \ln x \ll x^p \ll a^x \ll n! \ll n^n$$
+
+\Satz $\star$ \key{Stirling-Formel}: Für grosse $n \in \NN$ gilt die Näherung
+$$n! \sim \sqrt{2\pi n} \left(\frac{n}{e}\right)^n$$
 
 \Satz \key{Sandwich-Theorem}:
 Seien $(a_n)_{n\in\NN_0}$ und $(c_n)_{n\in\NN_0}$ mit gleichem Grenzwert $L$ und
@@ -93,8 +94,8 @@ falls $\forall n,m \in \NN_0 : m > n \implies a_m\le a_n$ (resp. $\geq$).
 \begin{itemize}
     \item $\limsup\limits_{n\to\infty} a_n = \inf\limits_{n\in\NN_0}(\sup\{a_k \, | \, k\ge n\})$
     \item $\liminf\limits_{n\to\infty} a_n = \sup\limits_{n\in\NN_0}(\inf\{a_k \, | \, k\ge n\})$
-    \item konvergente Folge: $\lim\limits_{n\to\infty} a_n = \limsup\limits_{n\to\infty} a_n = \liminf\limits_{n\to\infty} a_n$
-    \item beschr. konvergiert gdw $\lim\limits_{n\to\infty}a_n = \limsup_{n\to\infty} a_n = \liminf\limits_{n\to\infty} a_n$
+    \item beschr. Folge konvergiert gdw $\limsup\limits_{n\to\infty} a_n = \liminf\limits_{n\to\infty} a_n$;
+    dann gilt $\lim\limits_{n\to\infty} a_n = \limsup\limits_{n\to\infty} a_n = \liminf\limits_{n\to\infty} a_n$
 \end{itemize}
 
 \Satz Beschränkt, $\limsup\limits_{n\to\infty}a_n = A$. Dann $A$ Häufungspunkt,  $\forall\varepsilon > 0$:
